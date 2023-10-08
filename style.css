@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Shantell+Sans:wght@600&display=swap');
+
+:root {
+    --color-background: #F1E9D2;
+    --color-nav-bg: #F3F2ED;
+    --text-dark: #0D0D0D;
+    --text-light: #404040;
+    --extra-light: #F3F2ED;
+    --max-width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+a:visited {
+    color: var(--text-light);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color-nav-bg);
+    z-index: 99;
+}
+
+.nav__content {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo img {
+    height: 1rem;
+    filter:
+        drop-shadow(0.1rem 0.08rem 0.1rem var(--text-light));
+    float: inline-end;
+    margin-left: 0.5rem;
+}
+
+nav .logo a {
+    font-size: 1.5rem;
+    font-family: 'Shantell Sans', cursive;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: 0.3s;
+}
+
+nav .logo a:hover {
+    color: var(--text-light);
+}
+
+nav .checkbox {
+    display: none;
+}
+
+nav input {
+    display: none;
+}
+
+nav .checkbox span {
+    font-size: 2rem;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+}
+
+ul li a {
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+ul li a:hover {
+    border-top-color: var(--text-dark);
+    border-bottom-color: var(--text-dark);
+    color: var(--text-dark);
+}
+
+.section {
+    background-color: var(--color-background);
+}
+
+.section__container {
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subtitle {
+    letter-spacing: 2px;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.title span {
+    font-weight: 600;
+}
+
+.description {
+    line-height: 2rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+}
+
+sup {
+    font-size: 0.75rem;
+}
+
+.description__sub {
+    line-height: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-size: 0.75rem;
+}
+
+.action__btns {
+    display: flex;
+    gap: 1rem;
+}
+
+.action__btns button {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 2rem;
+    outline: none;
+    border: 2px solid var(--text-light);
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.action__btns img {
+    width: 16px;
+}
+
+.contratar {
+    background-color: var(--text-dark);
+    color: var(--extra-light);
+}
+
+.contratar:hover {
+    background-color: var(--text-light);
+}
+
+.portfolio {
+    color: var(--text-light);
+}
+
+.portfolio:hover {
+    background-color: var(--text-light);
+    color: var(--extra-light);
+}
+
+.portfolio a:visited {
+    color: var(--text-light);
+}
+
+.image {
+    display: grid;
+    place-items: center;
+}
+
+.image img {
+    width: min(25rem, 90%);
+    border-radius: 100%;
+    filter:
+        drop-shadow(2px 8px 20px var(--text-light)) saturate(120%) contrast(95%) brightness(108%);
+}
+
+.section__container--curriculo {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    border-bottom: 1px solid #333;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 4rem;
+}
+
+.title--curriculo {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    padding: 1rem;
+    margin: auto;
+    max-width: var(--max-width);
+    border-bottom: 1px solid #333;
+}
+
+.section__container--curriculo:last-child {
+    border-bottom: none;
+}
+
+.section__habilidades {
+    display: flex;
+    flex-direction: column;
+}
+
+.title--portfolio {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    padding: 5% 1rem 1rem;
+    margin: auto;
+    max-width: var(--max-width);
+}
+
+.section__container-portfolio {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.article__portfolio {
+    border-right: 1px solid;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.article__portfolio:first-child {
+    padding-left: 0;
+}
+
+.article__portfolio:last-child {
+    border: none;
+}
+
+.section__container--contato {
+    max-width: var(--max-width);
+    min-height: calc(100vh - 200px);
+    margin: auto;
+    padding: 20px;
+}
+
+input[type=text],
+input[type=mail],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+/* Configurações para telas menores */
+@media (width < 768px) {
+    nav .checkbox {
+        display: block;
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top: 85px;
+        background-color: var(--extra-light);
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    nav #check:checked~ul {
+        left: 10px;
+    }
+
+    ul li a {
+        font-size: 1.25rem;
+    }
+
+    .section__container {
+        padding: 6rem 1rem 5rem 1rem;
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .title {
+        font-size: 2rem;
+        line-height: 2.8rem;
+        margin-bottom: 1.7rem;
+    }
+
+    .action__btns button {
+        padding: 1rem 0.75rem;
+    }
+
+    .image {
+        grid-area: 1/1/2/2;
+    }
+
+    .image img {
+        width: min(25rem, 60%);
+    }
+
+    .action__btns {
+        margin: auto;
+    }
+
+    .section__container--curriculo {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .section__habilidades {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .section__container-portfolio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article__portfolio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        border-right: none;
+        border-bottom: 1px solid;
+        padding: 10% 0 10%;
+
+    }
+}
