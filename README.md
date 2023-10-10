@@ -1,2 +1,3 @@
 # portfolio
-Portfólio pessoal
+Trabalho da disciplina Fundamentos da Programação Web
+Portfólio pessoal.
